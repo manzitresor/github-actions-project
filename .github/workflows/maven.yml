@@ -34,6 +34,10 @@ jobs:
       with:
         image: tresormanzi/demo
         registry: docker.io
+        tags: |
+          pr-${{ github.event.number }}-${{ github.sha }}
+          latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+
 
